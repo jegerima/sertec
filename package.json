@@ -1,0 +1,28 @@
+{
+  "name": "sertec",
+  "version": "1.0.0",
+  "description": "inventory",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jegerima/sertec.git"
+  },
+  "keywords": [
+    "service",
+    "inventory",
+    "nodejs",
+    "express"
+  ],
+  "author": "@jegerima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jegerima/sertec/issues"
+  },
+  "homepage": "https://github.com/jegerima/sertec#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
