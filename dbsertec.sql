@@ -1,9 +1,11 @@
 
+/*
 DROP DATABASE IF EXISTS dbsertec;
 DROP USER IF EXISTS stboss;
 
 CREATE USER stboss WITH PASSWORD 'M4nu3lTur1z0'
 CREATE DATABASE dbsertec ENCODING 'UTF8' OWNER stboss;
+*/
 
 DROP TABLE IF EXISTS solicitud_detalle;
 DROP TABLE IF EXISTS solicitud;
