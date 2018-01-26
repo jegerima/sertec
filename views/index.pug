@@ -1,0 +1,113 @@
+doctype html
+html
+	head
+		title Servicio Técnico | Admin
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="description" content="sertecapp")
+		meta(name="author" content="jegerima")
+
+		link(rel="icon" href="/public/images/logoapp.png")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato")
+		link(rel="stylesheet" href="/public/css/fontawesome-all.min.css")
+
+		style.
+			body{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: #0360a6;
+				font-family: 'Lato', sans-serif;
+			}
+
+			.container{
+				height: 100%;
+				max-width: initial;
+				background: rgba(1,145,195,1);
+				background: linear-gradient( 0deg, rgba(3,96,166,1),rgba(1,145,195,1));
+				background: -webkit-linear-gradient( 0deg, rgba(3,96,166,1),rgba(1,145,195,1));
+			}
+
+			.main-wrapper{
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				position: absolute;
+				height: 200px;
+			}
+
+			.st-input-container{
+				background: white;
+				border-radius: 10px;
+				padding: .75em;
+			}
+
+			.st-forgotten{
+				text-align: center;
+			}
+
+			.st-forgotten a {
+				padding: 0.5em 0em;
+			}
+
+			.st-divider{
+				width: 96%;
+				margin: -2px 2% 2px;
+				height: 1px;
+				background: gray;
+			}
+
+			input.form-control{
+				padding: 1.5rem .75rem .5rem;
+				border: 0px;
+				margin-bottom: 5px;
+			}
+
+			button.btn.btn-success{
+				width: 100%;
+			}
+
+			.st-circle{
+				border-radius: 50%;
+				background: -webkit-linear-gradient( 0deg, rgba(3,96,166,1),rgba(1,145,195,1));
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: -60px;
+			}
+			.st-circle .st-circle-white{
+				position: absolute;
+				border-radius: 50%;
+				border: 2px solid white;
+				width: 70px;
+				height: 70px;
+				top: 5px;
+				left: 5px;
+			}
+	body
+		.container.main-content
+			.row.justify-content-center.main-wrapper
+				.col-xs-10.col-xs-offset-1.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+					.row.justify-content-around
+						.st-circle
+							.st-circle-white
+						form#frm_login.form
+							.col-xs-12.st-input-container
+								input#txt_username.form-control(name="user" type="text" placeholder="Usuario" required="required")
+								.st-divider
+								input#txt_password.form-control(name="pass" type="password" placeholder="Contraseña" required="required")
+							br
+							.col-xs-12
+								button#btn_login.btn.btn-success Ingresar
+							.col-xs-12.st-forgotten
+								a(href="#") Olvidaste la contraseña?
+
+		
+		script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+		script(type="text/javascript").

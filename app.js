@@ -33,7 +33,7 @@ logger.configure({
 });
 
 app.get("/", function(req,res){
-	res.send(jparse(true,"Servicio Técnico Index",{}));
+	res.render("index");
 });
 
 let port = 2120;
