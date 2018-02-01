@@ -96,9 +96,19 @@ app.post("/login", function(req,res){
 	}
 });
 
+app.get("/logout", function(req,res){
+	console.log("logout", req.session.usuario_id);
+	if(req.session.usuario_id){
+		req.session = null;
+	}
+	res.redirect("/");
+});
+
 app.get("/", function(req,res){
 	res.render("index");
 });
+
+
 
 app.use("/webapp", mw_sesion);
 app.use("/webapp", rt_main.getRouter(m,logger));

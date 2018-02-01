@@ -11,12 +11,11 @@ module.exports.getRouter = function(m, logger){
 
 	router.get(["/main", "/"], function(req,res){
 		try{
-			//res.render("dashboard", {ok: true, pagina: 'Dashboard'});
-			res.send(jparse(true, 'dashboard'));
+			res.render("main", {ok: true, pagina: 'Dashboard'});
+			//res.send(jparse(true, 'dashboard'));
 		}catch(err){
 			logerror(logger,err);
-			//res.render("dashboard", {ok: false, pagina: 'Dashboard', error: error});
-			res.send(jparse(false, 'dashboard'));
+			res.render("main", {ok: false, pagina: 'Dashboard', error: error});
 		}
 	});
 
