@@ -1,0 +1,316 @@
+doctype html
+html(lang="es")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="description" content="sertec")
+		meta(name="author" content="@jegerima")
+
+		title Sertec
+
+		link(rel="icon" href="/static/images/favicon.png")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato")
+		link(rel="stylesheet" href="public/css/stbase.css")
+
+		style.
+			body{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				font-family: 'Lato', sans-serif;
+				background: #ededed;
+			}
+
+			.st-icon-bar {
+				width: 80px; /* Set a specific width */
+				background-color: #555; /* Dark-grey background */
+				background: linear-gradient(0deg, rgba(3,96,166,1), rgba(1,145,195,1));
+				height: 100%;
+				position: fixed;
+				box-shadow: 3px 0px 6px #888;
+				z-index: 101;
+			}
+
+			.st-icon-bar a {
+				display: block; /* Make the links appear below each other instead of side-by-side */
+				text-align: center; /* Center-align text */
+				padding: 10px 8px; /* Add some padding */
+				transition: all 0.3s ease; /* Add transition for hover effects */
+				color: white; /* White text color */
+				font-size: 32px; /* Increased font-size */
+			}
+
+			.st-icon-bar a p{
+				font-size: 10px;
+				margin: -.5em 0px 0px 0px;
+			}
+
+			.st-icon-bar a:hover {
+				background-color: #000; /* Add a hover color */
+				text-decoration: none;
+			}
+
+			.st-icon-bar a.active {
+				background-color: #024c85; /* Add an active/current color */
+			}
+
+			.container-fluid.st-container{
+				background: #ededed;
+				margin: 70px 0px 0px 80px;
+				height: calc(100% - 70px);
+				width: calc(100% - 80px);
+				padding: 0px;
+			}
+
+			.navbar.st-navbar{
+				border-bottom: 1px solid #dedede;
+				/*padding: 14px 1rem 15px 1rem;*/
+				padding: 0px;
+				margin-left: 80px;
+				width: calc(100% - 80px);
+				position: absolute;
+				min-height: 70px;
+				background: white;
+				z-index: 100;
+			}
+
+			.nav-item.st-nav-item{
+				width: 64px;
+				height: 70px;
+				padding: 15px 0px;
+				font-size: 24px;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			.nav-item.st-nav-item:hover{
+				background: #efefef;
+			}
+
+			.nav-item.st-nav-item>a{
+				padding: 0px;
+			}
+
+			.st-nav-divider{
+				width: 1px;
+				height: 70px;
+				background: #dedede;
+			}
+
+			.dropdown-toggle::after{
+				content: none;
+			}
+
+			.st-user-content{
+				text-align: left;
+			}
+
+			.st-user-content img{
+				width: 70px;
+				height: 70px;
+				background: white;
+				display: inline-block;
+				float: left;
+			}
+
+			.st-user-content div{
+				width: 160px;
+				display: inline-block;
+				font-size: 12px;
+				float: left;
+				padding-left: 1em;
+				margin-top: 1.5em;
+			}
+
+			.st-user-content i{
+				width: 26px;
+				height: 70px;
+				text-align: center;
+				float: right;
+				padding: 1.5rem 0px;
+			}
+
+			.st-user-content p{
+				margin: 0px;
+			}
+
+			.st-navbar-search{
+				border-radius: 1em;
+			}
+
+			@media only screen and (max-width : 991px) {
+				.st-nav-divider {
+					display: none;
+				}
+			}
+
+			.st-logo-a, .st-logo-a:hover{
+				background: white !important;
+			}
+
+			.st-logo{
+				width: 48px;
+			}
+
+		block extraCSS
+	body
+
+		.st-icon-bar
+			a.st-logo-a(href="/")
+				img.st-logo(src="/public/images/logo_color.jpeg")
+			a.active(href="#")
+				i.fa.fa-home
+				p Inicio
+			a(href="#")
+				i.fa.fa-user
+				p Ingresos
+			a(href="#")
+				i.fa.fa-cogs
+				p Configuraci&oacute;n
+
+		nav.navbar.navbar-expand-lg.navbar-light.st-navbar
+			//a.navbar-brand(href='#') Navbar
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation', style="margin: 15px 0px 15px 1em;")
+				span.navbar-toggler-icon
+			#navbarSupportedContent.collapse.navbar-collapse
+				ul.navbar-nav.mr-auto
+					
+					//li.nav-item.dropdown
+						a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							| Dropdown
+						.dropdown-menu(aria-labelledby='navbarDropdown')
+							a.dropdown-item(href='#') Action
+							a.dropdown-item(href='#') Another action
+							.dropdown-divider
+							a.dropdown-item(href='#') Something else here
+					
+					.st-nav-divider
+					li.nav-item.st-nav-item.dropdown(style="width: 72px;")
+						a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							i.fa.fa-ellipsis-h
+						.dropdown-menu(aria-labelledby='navbarDropdown')
+							a.dropdown-item(href='#') Action
+							a.dropdown-item(href='#') Another action
+							.dropdown-divider
+							a.dropdown-item(href='#') Something else here
+					.st-nav-divider
+					li.nav-item.st-nav-item
+						a.nav-link
+							i.fa.fa-folder
+					.st-nav-divider
+					li.nav-item.st-nav-item
+						a.nav-link
+							i.fa.fa-sliders
+					.st-nav-divider
+				form.form-inline.my-2.my-lg-0
+					input.form-control.mr-sm-2.st-navbar-search(type='search', placeholder='Buscar Ingreso', aria-label='Search')
+					button.btn.btn-outline-success.my-2.my-sm-0(type='submit') B
+				ul.navbar-nav.ml-auto
+					.st-nav-divider
+					li.nav-item.st-nav-item
+						a.nav-link
+							i.fa.fa-envelope
+					.st-nav-divider
+					li.nav-item.st-nav-item
+						a.nav-link
+							i.fa.fa-globe
+					.st-nav-divider
+					li.nav-item.st-nav-item.dropdown(style="width: 256px; padding: 0px;")
+						a#userDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', style="padding: 0px;")
+							.st-user-content
+								img(src="/public/images/default-person.jpg")
+								div
+									b
+										p #{usuario.nombre + ' ' + usuario.apellido}
+									p Gerente de operaciones
+								i.fa.fa-ellipsis-v
+
+
+						.dropdown-menu(aria-labelledby='userDropdown', style="right: 2px; left: auto;")
+							a.dropdown-item(href='#') Preferencias
+							a.dropdown-item(href='#') Cambiar foto
+							a.dropdown-item(href='#') Acerca de
+							.dropdown-divider
+							a.dropdown-item(href='/logout') Cerrar sesi&oacute;n
+
+		.container-fluid.st-container
+			block content
+
+		block anyModal
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+		script.
+			function sdPost(url, formData, cbok, cberror){
+				console.log('fetching sdPost: '+url)
+				$.ajax({
+					url: url,
+					type: "POST",
+					data: formData,
+					cache: false,
+					contentType: false,
+					processData: false,
+					error: function(){
+						showSnackbar("Error en el requerimiento");
+					},
+					success: function(packet,status, xhr){
+						if(xhr.status == 200){
+							if(!packet.status){
+								if(!packet.message){
+									showSnackbar(packet, COLOR_ERROR)
+								}else{
+									showSnackbar(packet.message, COLOR_ERROR)
+								}
+								console.log("ERROR", xhr);
+								if(cberror)cberror(packet,xhr);
+							}else{
+								showSnackbar(packet.message, COLOR_SUCCESS);
+								console.log("OK", xhr);
+								if(cbok)cbok(packet,xhr)
+							}
+						}else{
+							showSnackbar("Error in request");
+						}
+					}
+				});
+			}
+
+			function sdGet(url, cbok, cberror){
+				console.log('fetching sdGet: '+url);
+				$.get(url).done(function(res,stat,xhr){
+					if(res.status==true){
+						console.log("OK", xhr);
+						if(cbok)cbok(res,xhr)
+					}else{
+						console.log("FAIL", xhr);
+					}
+				}).fail(function(err){
+					console.log("ERROR", err);
+					if(cberror)cberror(err);
+				})
+			}
+
+		block extraJS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+.st-header{
+	text-transform: uppercase;
+	font-size: 1rem;
+	padding: 1em .75em;
+	color: #0191c3;
+}
+
+.st-form{
+	margin-left: 2em;
+}
+
+.st-form label{
+	font-size: 0.8rem;
+	padding-top: 0px;
+	padding-right: 0px;
+	color: #777;
+}
+
+.st-form input{
+	border: 0px;
+	border-radius: 0px;
+	border-bottom: 1px solid #aaa;
+	font-size: 0.8rem;
+	padding: 0px;
+}
+
+.st-form input:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #0191c3;
+}
+
+.st-section{
+	margin: 1em;
+	background: white;
+	box-shadow: 0px 0px 10px #aaa;
+	-webkit-box-shadow: 0px 0px 10px #aaa;
+	padding-bottom: 1em;
+}
+
+.st-row-grey{
+	background: #ededed;
+	height: 8px;
+}
+
+@media only screen and (max-width : 991px) {
+	.st-form {
+		margin-left: 0px; 
+	}
+
+	.st-section{
+		margin: 0em;
+	}
+}
+
+.st-buttons-bar{
+	background: white;
+	padding: 0em 1em;
+}
+
+.st-buttons-bar button{
+	background: #0191c3;
+	border-color: #0191c3;
+	margin: 1em;
+}
+
+
+#tabledata{
+	margin-top: -.5rem;
+}
+
+#tabledata thead tr>th:first-child, #tabledata tbody tr>td:first-child{
+	display: none;
+}
+
+#tabledata thead tr>th, #tabledata tbody tr>td{
+	border-right: 2px solid #cdcdcd;
+}
+
+#tabledata thead tr>th:last-child, #tabledata tbody tr>td:last-child{
+	border-right: 0px;
+}
+
+#tabledata .table thead th{
+	border-bottom: 0px;
+	border-top: 0px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: .9rem;
+	padding: 1em .75em;
+	color: #0191c3;
+}
+
+#tabledata .table tbody td{
+	font-size: .8rem;
+}
+
+#tabledata .editablegrid-action{
+	width: 80px;
+    text-align: center;
+    padding-left: .3em;
+    padding-right: .3em;
+}
+
+

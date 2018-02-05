@@ -12,7 +12,6 @@ module.exports.getRouter = function(m, logger){
 	router.get(["/main", "/"], function(req,res){
 		try{
 			res.render("main", {ok: true, pagina: 'Dashboard'});
-			//res.send(jparse(true, 'dashboard'));
 		}catch(err){
 			logerror(logger,err);
 			res.render("main", {ok: false, pagina: 'Dashboard', error: error});
